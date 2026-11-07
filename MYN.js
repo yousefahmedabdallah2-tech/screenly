@@ -2,11 +2,11 @@
 function toggleTheme() {
     let theme = document.getElementById("theme-style");
 
-    if (theme.getAttribute("href") === "css_files/MYN.css") {
-        theme.setAttribute("href", "css_files/MYN2.css");
+    if (theme.getAttribute("href") === "MYN.css") {
+        theme.setAttribute("href", "MYN2.css");
         localStorage.setItem("theme", "light");
     } else {
-        theme.setAttribute("href", "css_files/MYN.css");
+        theme.setAttribute("href", "MYN.css");
         localStorage.setItem("theme", "dark");
     }
     checkGenreVisibility();
@@ -17,10 +17,10 @@ window.onload = function () {
     let saved = localStorage.getItem("theme") || "dark";
 
     if (saved === "light") {
-        document.getElementById("theme-style").href = "css_files/MYN2.css";
+        document.getElementById("theme-style").href = "MYN2.css";
         movieDiv.style.backgroundColor
     } else {
-        document.getElementById("theme-style").href = "css_files/MYN.css";
+        document.getElementById("theme-style").href = "MYN.css";
     }
 };
 
